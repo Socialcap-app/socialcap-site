@@ -5,10 +5,52 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter;
   line-height: 1.5;
 }
 
 body {
-  background-color: white;
+  background-color: #F9FBFC;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: "WixMadeforDisplayBold";
+  /*Can be any text*/
+  src: local("WixMadeforDisplay-Bold"),
+    url("./fonts/WixMadeforDisplay-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "WixMadeforDisplayExtraBold";
+  /*Can be any text*/
+  src: local("WixMadeforDisplay-ExtraBold"),
+    url("./fonts/WixMadeforDisplay-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AlbertSans-Black";
+  /*Can be any text*/
+  src: local("AlbertSans-Black"),
+    url("./fonts/AlbertSans-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AlbertSans-Regular";
+  /*Can be any text*/
+  src: local("AlbertSans-Regular"),
+    url("./fonts/AlbertSans-Regular.ttf") format("truetype");
 }

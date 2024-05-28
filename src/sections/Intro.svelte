@@ -1,12 +1,19 @@
 <script>
     import { Card, Button } from 'flowbite-svelte';
     import { ArrowRightOutline } from 'flowbite-svelte-icons';
+
+    export let isPhone;
 </script>
 
-<div class="mb-24">
-    <Card shadow={false} class={'bg-transparent border-0 max-w-sm my_card'}>
+<div class="text-center mb-40 mt-20">
+    <Card
+        shadow={false}
+        class={isPhone
+            ? 'bg-transparent border-0 text-center m-auto'
+            : 'bg-transparent border-0 mb-20 ml-20'}
+    >
         <h5
-            class="mb-2 text-6xl tracking-tight text-gray-900 dark:text-white text-center"
+            class="font-semibold mb-2 text-6xl tracking-tight text-gray-900 dark:text-white text-center"
         >
             The Social Consensus Layer
         </h5>
@@ -21,4 +28,7 @@
 </div>
 
 <style>
+    h5 {
+        max-width: 500px;
+    }
 </style>
