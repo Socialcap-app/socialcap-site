@@ -14,7 +14,7 @@
         {title}
     </h5>
     <p
-        class="mt-5 mb-8 font-normal text-gray-500 dark:text-gray-400 leading-tight text-center max-w-fit px-9"
+        class="mt-5 font-normal text-gray-500 dark:text-gray-400 leading-tight text-center max-w-fit px-9"
     >
         {description}
     </p>

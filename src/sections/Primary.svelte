@@ -10,37 +10,21 @@
     import Poster from '../components/Poster.svelte';
 
     export let isPhone;
-
-    const cards = [
-        {
-            title: 'Streamlined Process',
-            icon: ObjectsColumnOutline,
-            paragraph:
-                'Simplified issuance of credentials, making it easier and faster for both admins and users.',
-        },
-        {
-            title: 'Rigorous Validation',
-            icon: FileShieldOutline,
-            paragraph:
-                'A meticulous community-based validation process that ensures credentials are reliable and trustworthy.',
-        },
-        {
-            title: 'Enhanced Trust',
-            icon: BadgeCheckOutline,
-            paragraph:
-                'Stronger community bonds through transparent and dependable credential verification.',
-        },
-    ];
+    export let primaryCards;
 </script>
 
-<div class="flex flex-col items-center justify-center">
+<div
+    class={isPhone
+        ? 'flex flex-col items-center justify-center'
+        : 'w-3/5 p-1 m-1'}
+>
     <Poster
         blueTitle={'POWER TO THE PEOPLE'}
         title={'Power up your Community'}
         description={"Supercharge your community's potential by leveraging the collective wisdom and trust of its members. Enable seamless, efficient interactions that drive innovation and meaningful connections."}
     />
     <div class="text-center">
-        {#each cards as card}
+        {#each primaryCards as card}
             <div
                 class="shadow-md rounded-lg flex flex-row items-center justify-start flex-wrap bg-white m-7"
             >
