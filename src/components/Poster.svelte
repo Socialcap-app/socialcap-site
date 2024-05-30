@@ -4,24 +4,45 @@
     export let blueTitle;
     export let title;
     export let description;
+    export let bg_blue = false;
+    export let centered = false;
+
+    let spreadTitle = title.split('.');
 </script>
 
-<p class="pow text-bold text-center font-semibold">{blueTitle.toUpperCase()}</p>
-<Card shadow={false} class={'bg-transparent border-0 my_card m-auto max-w-4xl'}>
-    <h5
-        class="font-semibold mb-2 text-4xl tracking-tight text-gray-900 dark:text-white text-center"
-    >
-        {title}
-    </h5>
-    <p
-        class="mt-5 font-normal text-gray-500 dark:text-gray-400 leading-tight text-center max-w-fit px-9"
-    >
-        {description}
-    </p>
-</Card>
+<div class={centered ? 'text-center' : 'text-left'}>
+    <Card shadow={false} class={'bg-transparent border-0 m-auto max-w-full'}>
+        <p
+            class={'text-bold font-semibold my-9 ' +
+                (bg_blue ? 'text-white dark:text-white ' : 'pre-title ') +
+                (centered ? 'text-center' : 'text-left')}
+        >
+            {blueTitle.toUpperCase()}
+        </p>
+        {#each spreadTitle as titles}
+            <h5
+                class={'font-semibold mb-2 text-4xl tracking-tight ' +
+                    (bg_blue
+                        ? 'text-white dark:text-white '
+                        : 'text-gray-900 dark:text-white ')}
+            >
+                {titles + (spreadTitle[0] === titles ? '.' : '')}
+            </h5>
+        {/each}
+        <p
+            class={'font-normal leading-tight max-w-fit m-auto mt-5 ' +
+                (bg_blue
+                    ? 'text-white dark:text-white '
+                    : 'text-gray-500 dark:text-gray-400 ') +
+                (centered ? 'text-center px-9' : 'text-left')}
+        >
+            {description}
+        </p>
+    </Card>
+</div>
 
 <style>
-    .pow {
+    .pre-title {
         color: #95b2ff;
         line-height: 10px;
     }

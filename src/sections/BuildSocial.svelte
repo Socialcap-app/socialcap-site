@@ -13,6 +13,8 @@
         blueTitle={'Transparency is key'}
         title={'Build Social Consensus'}
         description={'Ensure that every decision reflects the collective will with multiple voting strategies. Safeguard fairness and transparency through features like random elector selection, anonymous voting, and self-auditing.'}
+        bg_blue={false}
+        centered={true}
     />
     <div class="text-center">
         {#each secondaryCards as card}

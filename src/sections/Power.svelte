@@ -16,12 +16,13 @@
 <div
     class={isPhone
         ? 'flex flex-col items-center justify-center'
-        : 'w-3/5 p-1 m-1'}
+        : 'w-3/5 p-1 mx-9'}
 >
     <Poster
         blueTitle={'POWER TO THE PEOPLE'}
         title={'Power up your Community'}
         description={"Supercharge your community's potential by leveraging the collective wisdom and trust of its members. Enable seamless, efficient interactions that drive innovation and meaningful connections."}
+        centered={isPhone}
     />
     <div class="text-center">
         {#each primaryCards as card}

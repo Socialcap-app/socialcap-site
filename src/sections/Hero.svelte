@@ -5,12 +5,16 @@
     export let isPhone;
 </script>
 
-<div class="text-center mb-40 mt-20">
+<div
+    class={isPhone
+        ? 'text-center mb-40 mt-20'
+        : 'text-center mb-40 mt-20 w-3/5'}
+>
     <Card
         shadow={false}
         class={isPhone
             ? 'bg-transparent border-0 text-center m-auto'
-            : 'bg-transparent border-0 mb-20 ml-20'}
+            : 'bg-transparent border-0 m-auto mb-20'}
     >
         <h5
             class="font-semibold mb-2 text-6xl tracking-tight text-gray-900 dark:text-white text-center"
