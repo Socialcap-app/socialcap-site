@@ -9,7 +9,7 @@
     export let coreCards = [];
 </script>
 
-<div class="my-20 m-auto">
+<div class="mb-20 m-auto">
     <Poster
         blueTitle={'Features'}
         title={'Core Features'}
@@ -18,36 +18,40 @@
         centered={true}
     />
     <div
-        class={'flex flex-col align-center justify-center ' +
+        class={'my-20 flex flex-col align-center justify-center ' +
             (isPhone ? 'flex-wrap' : '')}
     >
-        <div class={'flex flex-row m-auto gap-5 mx-20'}>
-            <div class="w-2/5 h-full">
+        <div class={'flex flex-row m-auto gap-5 mx-20 items-stretch'}>
+            <div class="w-2/5 h-max">
                 <Cards
                     {isPhone}
                     title={coreCards[0].title}
                     description={coreCards[0].description}
+                    textColor={'#7B818E'}
                 />
             </div>
-            <div class="w-3/5 h-full">
+            <div class="w-3/5 h-full flex-initial">
                 <Cards
                     {isPhone}
                     title={coreCards[1].title}
                     description={coreCards[1].description}
+                    textColor={'#7B818E'}
                 />
             </div>
         </div>
-        <div class={'flex flex-row  m-auto gap-5 mx-20'}>
+        <div class={'flex flex-row  m-auto gap-5 mx-20 items-stretch'}>
             <div class={'flex flex-col w-1/2'}>
                 <Cards
                     {isPhone}
                     title={coreCards[2].title}
                     description={coreCards[2].description}
+                    textColor={'#7B818E'}
                 />
                 <Cards
                     {isPhone}
                     title={coreCards[3].title}
                     description={coreCards[3].description}
+                    textColor={'#7B818E'}
                 />
             </div>
             <div class={'flex flex-col w-1/2'}>
@@ -56,6 +60,7 @@
                         {isPhone}
                         title={coreCards[4].title}
                         description={coreCards[4].description}
+                        textColor={'#7B818E'}
                     />
                 </div>
                 <div class="3/5">
@@ -63,6 +68,7 @@
                         {isPhone}
                         title={coreCards[5].title}
                         description={coreCards[5].description}
+                        textColor={'#7B818E'}
                     />
                 </div>
             </div>
