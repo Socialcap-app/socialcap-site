@@ -23,8 +23,11 @@
     ];
 </script>
 
-<div class="flex flex-wrap align-center justify-around">
-    <div class={'mt-20 ' + (isPhone ? '' : 'w-2/5')}>
+<div
+    class={'flex flex-row align-center justify-around ' +
+        (isPhone ? 'flex-wrap' : '')}
+>
+    <div class={'' + (isPhone ? 'w-full' : 'w-2/5')}>
         <Poster
             blueTitle={'validate everything'}
             title={'Fuel Engagement. Foster Growth'}
@@ -33,9 +36,9 @@
             centered={isPhone}
         />
     </div>
-    <div class={'my-20 ' + isPhone ? 'mx-5 mt-40' : ''}>
+    <div class={'' + (isPhone ? 'w-full m-5' : 'w-1/2')}>
         {#each cards as { title, description }}
-            <Cards {isPhone} {title} {description} />
+            <Cards {title} {description} />
         {/each}
     </div>
 </div>

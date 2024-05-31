@@ -3,7 +3,7 @@
 
     export let title;
     export let description;
-    export let isPhone;
+    /* export let isPhone; */
     export let textColor = '#1758FE';
 </script>
 

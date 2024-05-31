@@ -1,9 +1,9 @@
 <script>
     import { Card } from 'flowbite-svelte';
 
-    export let blueTitle;
-    export let title;
-    export let description;
+    export let blueTitle = '';
+    export let title = 'NO TITLE ASIGNED';
+    export let description = '';
     export let bg_blue = false;
     export let centered = false;
 
@@ -26,7 +26,10 @@
                         ? 'text-white dark:text-white '
                         : 'text-gray-900 dark:text-white ')}
             >
-                {titles + (spreadTitle[0] === titles ? '.' : '')}
+                {titles +
+                    (spreadTitle[0] === titles && spreadTitle.length - 1
+                        ? '.'
+                        : '')}
             </h5>
         {/each}
         <p

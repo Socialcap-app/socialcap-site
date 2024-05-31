@@ -13,6 +13,7 @@
     import AmplifyRep from './sections/AmplifyRep.svelte';
     import HowWorks from './sections/HowWorks.svelte';
     import CoreFea from './sections/CoreFea.svelte';
+    import Sponsors from './sections/Sponsors.svelte';
 
     let isPhone = true;
 
@@ -125,4 +126,5 @@
     <AmplifyRep {isPhone} {amplifyCards} />
     <HowWorks {isPhone} />
     <CoreFea {isPhone} {coreCards} />
+    <Sponsors />
 </div>
