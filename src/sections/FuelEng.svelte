@@ -36,7 +36,7 @@
             centered={isPhone}
         />
     </div>
-    <div class={'' + (isPhone ? 'w-full m-5' : 'w-1/2')}>
+    <div class={'' + (isPhone ? 'w-full m-5 mt-20' : 'w-1/2')}>
         {#each cards as { title, description }}
             <Cards {title} {description} />
         {/each}

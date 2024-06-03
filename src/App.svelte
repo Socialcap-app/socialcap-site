@@ -14,6 +14,8 @@
     import HowWorks from './sections/HowWorks.svelte';
     import CoreFea from './sections/CoreFea.svelte';
     import Sponsors from './sections/Sponsors.svelte';
+    import Newsletter from './sections/Newsletter.svelte';
+    import Footer from './sections/Footer.svelte';
 
     let isPhone = true;
 
@@ -115,16 +117,18 @@
     });
 </script>
 
-<div>
-    <Nav />
-    <Hero {isPhone} />
-    <Power {isPhone} {primaryCards} />
-    <BSocial {isPhone} {secondaryCards} />
-    <div style="background-color: #1758FE;">
-        <FEngagement {isPhone} />
-    </div>
-    <AmplifyRep {isPhone} {amplifyCards} />
-    <HowWorks {isPhone} />
-    <CoreFea {isPhone} {coreCards} />
-    <Sponsors />
+<Nav />
+<Hero {isPhone} />
+<Power {isPhone} {primaryCards} />
+<BSocial {isPhone} {secondaryCards} />
+<div style="background-color: #1758FE;">
+    <FEngagement {isPhone} />
 </div>
+<AmplifyRep {isPhone} {amplifyCards} />
+<HowWorks {isPhone} />
+<CoreFea {isPhone} {coreCards} />
+<Sponsors {isPhone} />
+<div style="background-color: #1758FE;">
+    <Newsletter {isPhone} />
+</div>
+<Footer {isPhone} />

@@ -13,7 +13,7 @@
 <div class={centered ? 'text-center' : 'text-left'}>
     <Card shadow={false} class={'bg-transparent border-0 m-auto max-w-full'}>
         <p
-            class={'text-bold font-semibold my-9 ' +
+            class={'font-semibold my-9 text-xs ' +
                 (bg_blue ? 'text-white dark:text-white ' : 'pre-title ') +
                 (centered ? 'text-center' : 'text-left')}
         >

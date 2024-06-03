@@ -1,6 +1,6 @@
 <script>
     import Poster from '../components/Poster.svelte';
-    import FormPc from '../components/FormPc.svg';
+    import FormPc from '../assets/FormPc.svg';
 
     export let isPhone = true;
 </script>

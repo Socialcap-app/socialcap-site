@@ -1,15 +1,7 @@
 <script>
-    import {
-        Alert,
-        Button,
-        NavBrand,
-        NavHamburger,
-        NavLi,
-        NavUl,
-        Navbar,
-    } from 'flowbite-svelte';
+    import { Button, Navbar } from 'flowbite-svelte';
 
-    import Logo from '../components/Logo.svg';
+    import Logo from '../assets/Logo.svg';
 </script>
 
 <Navbar class={'bg-transparent p-2 '}>

@@ -1,12 +1,4 @@
 <script>
-    import { Card, Button } from 'flowbite-svelte';
-    import {
-        ArrowRightOutline,
-        BadgeCheckOutline,
-        FileShieldOutline,
-        ObjectsColumnOutline,
-    } from 'flowbite-svelte-icons';
-    import { onMount } from 'svelte';
     import Poster from '../components/Poster.svelte';
 
     export let isPhone;

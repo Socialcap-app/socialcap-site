@@ -1,8 +1,8 @@
 <script>
     import Poster from '../components/Poster.svelte';
-    import Person from '../components/Person.svg';
-    import Comment from '../components/Comment.svg';
-    import Star from '../components/Star.svg';
+    import Person from '../assets/Person.svg';
+    import Comment from '../assets/Comment.svg';
+    import Star from '../assets/Star.svg';
 
     export let isPhone;
     export let amplifyCards = [];
