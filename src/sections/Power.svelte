@@ -1,12 +1,12 @@
 <script>
     import Poster from '../components/Poster.svelte';
+    import { isOnPhone as isPhone } from '../components/stores';
 
-    export let isPhone;
     export let primaryCards;
 </script>
 
 <div
-    class={isPhone
+    class={$isPhone
         ? 'flex flex-col items-center justify-center'
         : 'w-3/5 p-1 mx-9'}
 >
@@ -14,7 +14,7 @@
         blueTitle={'POWER TO THE PEOPLE'}
         title={'Power up your Community'}
         description={"Supercharge your community's potential by leveraging the collective wisdom and trust of its members. Enable seamless, efficient interactions that drive innovation and meaningful connections."}
-        centered={isPhone}
+        centered={$isPhone}
     />
     <div class="text-center">
         {#each primaryCards as card}
@@ -27,7 +27,7 @@
                 >
                     <svelte:component this={card.icon} />
                 </div>
-                <div class={!isPhone ? 'w-3/5 mx-7 content' : 'mx-7 content'}>
+                <div class={!$isPhone ? 'w-3/5 mx-7 content' : 'mx-7 content'}>
                     <h1
                         class="text-gray-900 dark:text-white text-left font-semibold"
                     >

@@ -8,11 +8,11 @@
     import sponsor6 from '../assets/ZkOkSponsor.svg';
     import sponsor7 from '../assets/ProtokitSponsor.svg';
 
-    export let isPhone;
+    import { isOnPhone as isPhone } from '../components/stores';
 
     const sponsors = [
-        sponsor2,
         sponsor1,
+        sponsor2,
         sponsor3,
         sponsor4,
         sponsor5,
@@ -22,12 +22,15 @@
 </script>
 
 <Poster title={'Powered by'} centered={true} />
-<div class="flex flex-row flex-wrap align-center justify-center m-10 my-20">
+<div
+    class={'flex flex-row flex-wrap align-center justify-center m-10 mb-20' +
+        ($isPhone ? ' flex-col gap-10' : '')}
+>
     {#each sponsors as sponsor}
         <img
             alt="icon"
-            class={'mx-auto my-3 text-center w-20 ' +
-                (isPhone ? 'w-3/5 h-15 m-5' : '')}
+            class={'mx-auto text-center ' +
+                ($isPhone ? 'm-5 max-w-56 max-h-12' : '')}
             src={sponsor}
         />
     {/each}

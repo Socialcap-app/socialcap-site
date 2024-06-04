@@ -2,7 +2,7 @@
     import Cards from '../components/Cards.svelte';
     import Poster from '../components/Poster.svelte';
 
-    export let isPhone = true;
+    import { isOnPhone as isPhone } from '../components/stores';
 
     let cards = [
         {
@@ -24,21 +24,61 @@
 </script>
 
 <div
-    class={'flex flex-row align-center justify-around ' +
-        (isPhone ? 'flex-wrap' : '')}
+    class={'relative flex flex-row align-center justify-around overflow-hidden ' +
+        ($isPhone ? 'flex-wrap' : '')}
 >
-    <div class={'' + (isPhone ? 'w-full' : 'w-2/5')}>
+    <div class={'' + ($isPhone ? 'w-full' : 'w-2/5')} style="z-index: 1;">
         <Poster
             blueTitle={'validate everything'}
             title={'Fuel Engagement. Foster Growth'}
             description={'Significantly enhance your social capital and reputation both within your community and beyond. By showcasing validated achievements and skills, members can extend their influence and network reach.'}
             bg_blue={true}
-            centered={isPhone}
+            centered={$isPhone}
         />
     </div>
-    <div class={'' + (isPhone ? 'w-full m-5 mt-20' : 'w-1/2')}>
+    <div
+        class={'' + ($isPhone ? 'w-full m-5 mt-20' : 'w-1/2')}
+        style="z-index: 1;"
+    >
         {#each cards as { title, description }}
             <Cards {title} {description} />
         {/each}
     </div>
+    <div
+        class={'square ' + ($isPhone ? 'top-20 right-0 rotate-45' : 'one')}
+    ></div>
+    <div
+        class={'square ' + ($isPhone ? 'top-60 right-80 rotate-45' : 'two ')}
+    ></div>
+    <div
+        class={'square ' +
+            ($isPhone ? 'bottom-60 right-0 rotate-45' : 'three ')}
+    ></div>
 </div>
+
+<style>
+    .square {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #d6e6ff61;
+        border-radius: 15%;
+        z-index: 0;
+    }
+    .one {
+        right: 60%;
+        transform: rotateZ(45deg);
+    }
+    .two {
+        width: 100px;
+        height: 100px;
+        right: 85%;
+        top: 70%;
+        transform: rotateZ(65deg);
+    }
+    .three {
+        right: 55%;
+        top: 80%;
+        transform: rotateZ(35deg);
+    }
+</style>

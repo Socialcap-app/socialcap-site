@@ -2,11 +2,11 @@
     import { Button, Input, Label } from 'flowbite-svelte';
     import Poster from '../components/Poster.svelte';
 
-    export let isPhone;
+    import { isOnPhone as isPhone } from '../components/stores';
 </script>
 
 <div class="pb-10">
-    <div class={'' + (isPhone ? 'w-3/5 m-auto' : 'w-full')}>
+    <div class={'' + ($isPhone ? 'w-3/5 m-auto' : 'w-full')}>
         <Poster
             blueTitle={''}
             title={'Join our Newsletter'}
@@ -20,9 +20,16 @@
     </p>
     <div
         class={'m-auto my-5 flex flex-row items-center justify-between ' +
-            (isPhone ? 'm-10' : 'w-2/5')}
+            ($isPhone ? 'mx-10' : 'w-2/5')}
     >
-        <Input type="text" id="email" placeholder="Enter your email" required />
+        <!-- <Input type="text" id="email" placeholder="Enter your email" required /> -->
+        <input
+            type="email"
+            id="email"
+            aria-describedby="email-for-subscribing"
+            class="bg-transparent border border-white text-white text-sm rounded-lg block w-full p-2.5"
+            placeholder="Enter your email"
+        />
         <Button color="light" class="m-2 font-normal text-blue-700"
             >Subscribe</Button
         >

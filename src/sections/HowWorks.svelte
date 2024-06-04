@@ -2,7 +2,7 @@
     import Poster from '../components/Poster.svelte';
     import FormPc from '../assets/FormPc.svg';
 
-    export let isPhone = true;
+    import { isOnPhone as isPhone } from '../components/stores';
 </script>
 
 <div class="mb-20">
@@ -13,7 +13,7 @@
         centered={true}
     />
     <img
-        class={'m-auto mt-20 ' + (isPhone ? 'w-11/12' : 'w-4/5')}
+        class={'m-auto mt-20 ' + ($isPhone ? 'w-11/12' : 'w-4/5')}
         alt="Form demostrativo"
         src={FormPc}
     />

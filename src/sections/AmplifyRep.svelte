@@ -3,8 +3,7 @@
     import Person from '../assets/Person.svg';
     import Comment from '../assets/Comment.svg';
     import Star from '../assets/Star.svg';
-
-    export let isPhone;
+    import { isOnPhone as isPhone } from '../components/stores';
     export let amplifyCards = [];
 </script>
 
@@ -18,24 +17,24 @@
     />
     <div
         class={'flex flex-row align-center justify-center ' +
-            (isPhone ? 'flex-wrap' : '')}
+            ($isPhone ? 'flex-wrap' : '')}
     >
         {#each amplifyCards as card}
             <div
                 class={'rounded-lg flex items-center justify-center flex-wrap m-7 m-auto flex-row ' +
-                    (isPhone ? 'text-center' : ' w-3/5')}
+                    ($isPhone ? 'text-center' : ' w-3/5')}
             >
                 <img
                     alt="icon"
                     class={'mx-auto my-6 text-center h-28 w-28 ' +
-                        (isPhone ? '' : '')}
+                        ($isPhone ? '' : '')}
                     src={card === amplifyCards[0]
                         ? Person
                         : card === amplifyCards[1]
                           ? Comment
                           : Star}
                 />
-                <div class={!isPhone ? 'w-3/5 mx-7 content' : 'mx-7'}>
+                <div class={!$isPhone ? 'w-3/5 mx-7 content' : 'mx-7'}>
                     <h1
                         class={'text-gray-900 dark:text-white font-semibold text-center'}
                     >

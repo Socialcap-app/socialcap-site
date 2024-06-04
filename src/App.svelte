@@ -16,8 +16,7 @@
     import Sponsors from './sections/Sponsors.svelte';
     import Newsletter from './sections/Newsletter.svelte';
     import Footer from './sections/Footer.svelte';
-
-    let isPhone = true;
+    import { isOnPhone } from './components/stores';
 
     const primaryCards = [
         {
@@ -113,22 +112,23 @@
     ];
 
     onMount(() => {
-        isPhone = window.innerWidth < 750;
+        console.log('mount');
+        isOnPhone.checkDimenssions();
     });
 </script>
 
 <Nav />
-<Hero {isPhone} />
-<Power {isPhone} {primaryCards} />
-<BSocial {isPhone} {secondaryCards} />
+<Hero />
+<Power {primaryCards} />
+<BSocial {secondaryCards} />
 <div style="background-color: #1758FE;">
-    <FEngagement {isPhone} />
+    <FEngagement />
 </div>
-<AmplifyRep {isPhone} {amplifyCards} />
-<HowWorks {isPhone} />
-<CoreFea {isPhone} {coreCards} />
-<Sponsors {isPhone} />
+<AmplifyRep {amplifyCards} />
+<HowWorks />
+<CoreFea {coreCards} />
+<Sponsors />
 <div style="background-color: #1758FE;">
-    <Newsletter {isPhone} />
+    <Newsletter />
 </div>
-<Footer {isPhone} />
+<Footer />
