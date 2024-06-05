@@ -1,5 +1,11 @@
 <script>
     import Poster from '../components/Poster.svelte';
+    import Elipses from '../assets/Hero/Elipses.svg';
+    import Rayo from '../assets/Hero/Rayo.svg';
+    import BlueAvatar from '../assets/Hero/BlueAvatar.svg';
+    import PinkAvatar from '../assets/Hero/PinkAvatar.svg';
+    import YellowAvatar from '../assets/Hero/YellowAvatar.svg';
+    import PurpleAvatar from '../assets/Hero/PurpleAvatar.svg';
     import { isOnPhone as isPhone } from '../components/stores';
 
     export let primaryCards;
@@ -16,6 +22,40 @@
         description={"Supercharge your community's potential by leveraging the collective wisdom and trust of its members. Enable seamless, efficient interactions that drive innovation and meaningful connections."}
         centered={$isPhone}
     />
+    {#if $isPhone}
+        <div class="relative h-96 w-full">
+            <img
+                class="absolute left-0 right-0 ml-auto mr-auto"
+                alt="icon"
+                src={Elipses}
+            />
+            <img
+                class="absolute left-0 right-0 ml-auto mr-auto text-center m-auto mt-20 pt-10"
+                alt="icon"
+                src={Rayo}
+            />
+            <img
+                class="absolute bottom-80 left-10"
+                alt="icon"
+                src={BlueAvatar}
+            />
+            <img
+                class="absolute left-60 right-0 ml-auto mr-auto text-center m-auto mt-20 pt-10"
+                alt="icon"
+                src={PinkAvatar}
+            />
+            <img
+                class="absolute top-40 left-0 right-20 ml-auto mr-auto text-center m-auto mt-20 pt-10"
+                alt="icon"
+                src={YellowAvatar}
+            />
+            <img
+                class="absolute top-40 left-40 right-0 ml-auto mr-auto text-center m-auto mt-20 pt-10"
+                alt="icon"
+                src={PurpleAvatar}
+            />
+        </div>
+    {/if}
     <div class="text-center">
         {#each primaryCards as card}
             <div

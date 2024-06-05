@@ -1,12 +1,12 @@
 <script>
     import Poster from '../components/Poster.svelte';
-    import sponsor1 from '../assets/TriangleSponsor.svg';
-    import sponsor2 from '../assets/LabsSponsor.svg';
-    import sponsor3 from '../assets/AeriusLabsSponsor.svg';
-    import sponsor4 from '../assets/MinaSponsor.svg';
-    import sponsor5 from '../assets/IgniteSponsor.svg';
-    import sponsor6 from '../assets/ZkOkSponsor.svg';
-    import sponsor7 from '../assets/ProtokitSponsor.svg';
+    import sponsor1 from '../assets/Sponsors/TriangleSponsor.svg';
+    import sponsor2 from '../assets/Sponsors/LabsSponsor.svg';
+    import sponsor3 from '../assets/Sponsors/AeriusLabsSponsor.svg';
+    import sponsor4 from '../assets/Sponsors/MinaSponsor.svg';
+    import sponsor5 from '../assets/Sponsors/IgniteSponsor.svg';
+    import sponsor6 from '../assets/Sponsors/ZkOkSponsor.svg';
+    import sponsor7 from '../assets/Sponsors/ProtokitSponsor.svg';
 
     import { isOnPhone as isPhone } from '../components/stores';
 

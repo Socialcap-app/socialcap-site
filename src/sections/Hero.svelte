@@ -3,9 +3,15 @@
     import { ArrowRightOutline } from 'flowbite-svelte-icons';
 
     import { isOnPhone as isPhone } from '../components/stores';
+    import { onMount } from 'svelte';
+
+    let smallWidth = true;
+    onMount(() => {
+        smallWidth = window.innerWidth < 1050;
+    });
 </script>
 
-<div class="relative overflow-hidden">
+<div class={'relative' + ($isPhone ? ' overflow-hidden' : '')}>
     <div
         style="z-index: 1;"
         class={$isPhone
@@ -19,7 +25,8 @@
                 : 'bg-transparent border-0 m-auto mb-20'}
         >
             <h5
-                class="z-10 font-semibold mb-2 text-6xl tracking-tight text-gray-900 dark:text-white text-center"
+                class={'z-10 font-semibold mb-2 text-6xl tracking-tight text-gray-900 dark:text-white ' +
+                    ($isPhone ? 'text-center' : 'text-left')}
             >
                 The Social Consensus Layer
             </h5>
@@ -29,22 +36,29 @@
                 Empowering communities through trusted credentials and rigorous
                 social consensus
             </p>
-            <Button color={'blue'} class="z-10 w-fit m-auto"
+            <Button
+                color={'blue'}
+                class={'z-10 w-fit' + ($isPhone ? ' m-auto' : '')}
                 >Join communities</Button
             >
         </Card>
     </div>
     <div
-        class={'square ' +
-            ($isPhone ? 'top-0 right-4/5 rotate-35 scale-50' : 'one')}
+        class={'square' +
+            ($isPhone ? ' top-10 left-60 rotate-45 scale-2' : ' one')}
     ></div>
     <div
-        class={'square ' +
-            ($isPhone ? 'top-40 right-3/4 rotate-35 scale-25' : 'two ')}
+        class={'square' +
+            ($isPhone ? ' top-10 right-60 rotate-35 scale-35' : ' two')}
     ></div>
+    <div class={'square' + (smallWidth ? ' hidden' : ' three')}></div>
     <div
-        class={'square ' + ($isPhone ? 'top-10 left-10 rotate-45' : 'four ')}
+        class={'square' +
+            (smallWidth ? ' bottom-60 scale-35 left-10 rotate-45' : ' four')}
     ></div>
+    {#if $isPhone}
+        <div></div>
+    {/if}
 </div>
 
 <style>
@@ -52,25 +66,34 @@
         position: absolute;
         width: 200px;
         height: 200px;
-        background-color: #d6e6ffdc;
+        background: rgb(217, 232, 255);
+        background: linear-gradient(
+            0deg,
+            rgba(217, 232, 255, 1) 0%,
+            rgba(242, 247, 255, 0.5) 100%
+        );
         border-radius: 15%;
         z-index: 0;
     }
     .one {
-        right: 60%;
-        transform: rotateZ(45deg);
+        top: 60%;
+        right: 10%;
+        transform: rotateZ(45deg) scale(2.7);
     }
     .two {
-        width: 100px;
-        height: 100px;
-        right: 85%;
-        top: 70%;
-        transform: rotateZ(65deg);
+        top: -60%;
+        left: 5%;
+        transform: rotateZ(25deg) scale(2);
     }
     .three {
-        right: 55%;
-        top: 80%;
-        transform: rotateZ(35deg);
+        top: 10%;
+        left: 30%;
+        transform: rotateZ(-15deg) scale(0.7);
+    }
+    .four {
+        bottom: -40%;
+        left: 10%;
+        transform: rotateZ(50deg) scale(0.7);
     }
 
     h5 {
