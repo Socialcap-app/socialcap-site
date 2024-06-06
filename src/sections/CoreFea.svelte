@@ -3,8 +3,15 @@
     import Cards from '../components/Cards.svelte';
 
     import { isOnPhone as isPhone } from '../components/stores';
+    import { onMount } from 'svelte';
 
     export let coreCards = [];
+
+    let isBigPc = false;
+
+    onMount(() => {
+        isBigPc = window.innerWidth > 1500;
+    });
 </script>
 
 <div class="m-auto">
@@ -25,7 +32,8 @@
             class={'flex' +
                 ($isPhone
                     ? ' flex-col'
-                    : ' flex-row m-auto gap-5 mx-20 items-stretch')}
+                    : ' flex-row m-auto gap-5 items-stretch' +
+                      (isBigPc ? '' : ' mx-20'))}
         >
             <div class={'w-2/5 ' + ($isPhone ? 'w-full' : '')}>
                 <Cards
@@ -46,7 +54,8 @@
             class={'flex' +
                 ($isPhone
                     ? ' flex-col'
-                    : ' flex-row  m-auto mx-20 mb-20 items-stretch gap-5 h-96')}
+                    : ' flex-row  m-auto mb-20 items-stretch gap-5 h-96' +
+                      (isBigPc ? '' : ' mx-20'))}
         >
             <div
                 class={'flex flex-col items-stretch h-full ' +

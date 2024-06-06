@@ -23,26 +23,28 @@
     ];
 </script>
 
-<div
-    class={'relative flex flex-row align-center justify-around overflow-hidden ' +
-        ($isPhone ? 'flex-wrap' : '')}
->
-    <div class={'' + ($isPhone ? 'w-full' : 'w-2/5')} style="z-index: 1;">
-        <Poster
-            blueTitle={'validate everything'}
-            title={'Fuel Engagement. Foster Growth'}
-            description={'Significantly enhance your social capital and reputation both within your community and beyond. By showcasing validated achievements and skills, members can extend their influence and network reach.'}
-            bg_blue={true}
-            centered={$isPhone}
-        />
-    </div>
+<div class="relative flex overflow-hidden m-auto w-full">
     <div
-        class={'' + ($isPhone ? 'w-full m-5 mt-20' : 'w-1/2')}
-        style="z-index: 1;"
+        class={'relative flex flex-row align-center justify-around overflow-hidden m-auto max-w-screen-lg' +
+            ($isPhone ? ' flex-wrap' : '')}
     >
-        {#each cards as { title, description }}
-            <Cards {title} {description} />
-        {/each}
+        <div class={'' + ($isPhone ? 'w-full' : 'w-2/5')} style="z-index: 1;">
+            <Poster
+                blueTitle={'validate everything'}
+                title={'Fuel Engagement. Foster Growth'}
+                description={'Significantly enhance your social capital and reputation both within your community and beyond. By showcasing validated achievements and skills, members can extend their influence and network reach.'}
+                bg_blue={true}
+                centered={$isPhone}
+            />
+        </div>
+        <div
+            class={'' + ($isPhone ? 'w-full m-5 mt-20' : 'w-1/2')}
+            style="z-index: 1;"
+        >
+            {#each cards as { title, description }}
+                <Cards {title} {description} />
+            {/each}
+        </div>
     </div>
     <div
         class={'square ' + ($isPhone ? 'top-20 right-0 rotate-45' : 'one')}

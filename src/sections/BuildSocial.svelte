@@ -7,13 +7,14 @@
     export let secondaryCards;
 </script>
 
-<div class="my-20 m-auto">
+<div class="my-20 m-auto max-w-screen-xl">
     <Poster
         blueTitle={'Transparency is key'}
         title={'Build Social Consensus'}
         description={'Ensure that every decision reflects the collective will with multiple voting strategies. Safeguard fairness and transparency through features like random elector selection, anonymous voting, and self-auditing.'}
         bg_blue={false}
         centered={true}
+        moreClasses={'max-w-screen-lg m-auto'}
     />
     <div class="text-center">
         {#each secondaryCards as card}
@@ -34,7 +35,7 @@
                           ? Pink
                           : Yellow}
                 />
-                <div class={!$isPhone ? 'w-3/5 mx-7 content' : 'mx-7'}>
+                <div class={!$isPhone ? 'w-3/5 mx-7 flex flex-col ' : 'mx-7'}>
                     <h1
                         class={'text-gray-900 dark:text-white font-semibold ' +
                             ($isPhone ? 'text-center' : 'text-left')}
@@ -52,10 +53,3 @@
         {/each}
     </div>
 </div>
-
-<style>
-    .content {
-        display: flex;
-        flex-direction: column;
-    }
-</style>

@@ -124,9 +124,11 @@
 <div style="background-color: #1758FE;">
     <FEngagement />
 </div>
-<AmplifyRep {amplifyCards} />
-<HowWorks />
-<CoreFea {coreCards} />
+<div class="max-w-screen-xl m-auto">
+    <AmplifyRep {amplifyCards} />
+    <HowWorks />
+    <CoreFea {coreCards} />
+</div>
 <Sponsors />
 <div style="background-color: #1758FE;">
     <Newsletter />

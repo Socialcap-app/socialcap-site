@@ -6,11 +6,12 @@
     export let description = '';
     export let bg_blue = false;
     export let centered = false;
+    export let moreClasses = '';
 
     let spreadTitle = title.split('.');
 </script>
 
-<div class={centered ? 'text-center' : 'text-left'}>
+<div class={moreClasses + (centered ? ' text-center' : ' text-left')}>
     <Card shadow={false} class={'bg-transparent border-0 m-auto max-w-full'}>
         <p
             class={'font-semibold my-9 text-xs ' +

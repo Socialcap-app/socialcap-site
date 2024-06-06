@@ -22,11 +22,11 @@
             shadow={false}
             class={$isPhone
                 ? 'bg-transparent border-0 text-center m-auto'
-                : 'bg-transparent border-0 m-auto mb-20'}
+                : 'bg-transparent border-0 m-auto mb-20 max-w-lg'}
         >
             <h5
-                class={'z-10 font-semibold mb-2 text-6xl tracking-tight text-gray-900 dark:text-white ' +
-                    ($isPhone ? 'text-center' : 'text-left')}
+                class={'z-10 font-semibold mb-2 tracking-tight text-gray-900 ' +
+                    ($isPhone ? 'text-center text-6xl' : 'text-left text-8xl')}
             >
                 The Social Consensus Layer
             </h5>
@@ -99,4 +99,10 @@
     h5 {
         max-width: 500px;
     }
+
+    /* <div class="block lg:hidden">
+			<ClaimsTableMobile data={
+        ($claims.data && Array.isArray($claims.data)) ? $claims.data : []
+      } />
+		</div> */
 </style>
