@@ -27,7 +27,7 @@
             type="email"
             id="email"
             aria-describedby="email-for-subscribing"
-            class="bg-transparent border border-white text-white text-sm rounded-lg block w-full p-2.5"
+            class="placeholder:text-white bg-transparent border border-white text-white text-sm rounded-lg block w-full p-2.5"
             placeholder="Enter your email"
         />
         <Button color="light" class="m-2 font-normal text-blue-700"

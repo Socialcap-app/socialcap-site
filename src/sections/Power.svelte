@@ -1,11 +1,11 @@
 <script>
     import Poster from '../components/Poster.svelte';
-    import Elipses from '../assets/Hero/Elipses.svg';
-    import Rayo from '../assets/Hero/Rayo.svg';
-    import BlueAvatar from '../assets/Hero/BlueAvatar.svg';
-    import PinkAvatar from '../assets/Hero/PinkAvatar.svg';
-    import YellowAvatar from '../assets/Hero/YellowAvatar.svg';
-    import PurpleAvatar from '../assets/Hero/PurpleAvatar.svg';
+    import Elipses from '../assets/Power/Elipses.svg';
+    import Rayo from '../assets/Power/Rayo.svg';
+    import BlueAvatar from '../assets/Power/BlueAvatar.svg';
+    import PinkAvatar from '../assets/Power/PinkAvatar.svg';
+    import YellowAvatar from '../assets/Power/YellowAvatar.svg';
+    import PurpleAvatar from '../assets/Power/PurpleAvatar.svg';
     import { isOnPhone as isPhone } from '../components/stores';
 
     export let primaryCards;
