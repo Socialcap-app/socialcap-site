@@ -1,7 +1,7 @@
 <script>
     import { onMount } from 'svelte';
-    import Hero from './sections/Hero.svelte';
     import Nav from './sections/Nav.svelte';
+    import Hero from './sections/Hero.svelte';
     import Power from './sections/Power.svelte';
     import BSocial from './sections/BuildSocial.svelte';
     import FEngagement from './sections/FuelEng.svelte';
@@ -16,24 +16,27 @@
     import Sponsors from './sections/Sponsors.svelte';
     import Newsletter from './sections/Newsletter.svelte';
     import Footer from './sections/Footer.svelte';
+    import firstPower from './assets/Power/firstPower.svg';
+    import secondPower from './assets/Power/secondPower.svg';
+    import thirdPower from './assets/Power/thirdPower.svg';
     import { isOnPhone } from './components/stores';
 
     const primaryCards = [
         {
             title: 'Streamlined Process',
-            icon: ObjectsColumnOutline,
+            icon: firstPower,
             paragraph:
                 'Simplified issuance of credentials, making it easier and faster for both admins and users.',
         },
         {
             title: 'Rigorous Validation',
-            icon: FileShieldOutline,
+            icon: secondPower,
             paragraph:
                 'A meticulous community-based validation process that ensures credentials are reliable and trustworthy.',
         },
         {
             title: 'Enhanced Trust',
-            icon: BadgeCheckOutline,
+            icon: thirdPower,
             paragraph:
                 'Stronger community bonds through transparent and dependable credential verification.',
         },

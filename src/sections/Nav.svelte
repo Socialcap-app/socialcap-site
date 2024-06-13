@@ -4,8 +4,16 @@
     import { isOnPhone as isPhone } from '../components/stores';
 </script>
 
-<Navbar class={'bg-transparent p-2' + ($isPhone ? 'mt-0' : ' mt-5')}>
+<div
+    class={'flex flex-row items-center justify-between bg-transparent p-5' +
+        ($isPhone ? '' : '')}
+>
     <img class="z-10" alt="logo" src={Logo} />
     <Button class={'px-5 text-sm font-normal z-10'} color="blue">Sign in</Button
     >
-</Navbar>
+</div>
+<!-- <Navbar class={'bg-transparent p-0 m-0' + ($isPhone ? ' p-2 mt-0' : ' pt-5')}>
+    <img class="z-10" alt="logo" src={Logo} />
+    <Button class={'px-5 text-sm font-normal z-10'} color="blue">Sign in</Button
+    >
+</Navbar> -->

@@ -11,7 +11,7 @@
     <h5 style="color: #1758FE;" class="mb-2 font-bold tracking-tight leading-7">
         {title}
     </h5>
-    <p style="color: {textColor};" class="font-normal leading-tight">
+    <p style="color: {textColor};" class="font-normal text-18 leading-7">
         {description}
     </p>
 </Card>

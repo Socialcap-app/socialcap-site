@@ -21,7 +21,7 @@
     >
         {#each amplifyCards as card}
             <div
-                class={'rounded-lg flex items-center justify-center flex-wrap m-7 m-auto flex-row ' +
+                class={'rounded-lg flex items-center justify-center flex-wrap m-5 m-auto flex-col ' +
                     ($isPhone ? 'text-center' : ' w-3/5')}
             >
                 <img
@@ -34,14 +34,16 @@
                           ? Comment
                           : Star}
                 />
-                <div class={!$isPhone ? 'w-3/5 mx-7 content' : 'mx-7'}>
+                <div
+                    class={!$isPhone ? 'max-w-screen-sm mx-7 content' : 'mx-7'}
+                >
                     <h1
-                        class={'text-gray-900 dark:text-white font-semibold text-center'}
+                        class={'text-[#102353] text-gray-900 text-18 leading-7 font-bold text-center mb-2'}
                     >
                         {card.title}
                     </h1>
                     <p
-                        class={'text-xs text-gray-500 dark:text-gray-400 leading-tight max-w-fit font-medium leading-7 text-center'}
+                        class={'text-18 text-gray-500 max-w-fit font-medium leading-7 text-center'}
                     >
                         {card.description}
                     </p>

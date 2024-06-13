@@ -6,6 +6,7 @@
     import PinkAvatar from '../assets/Power/PinkAvatar.svg';
     import YellowAvatar from '../assets/Power/YellowAvatar.svg';
     import PurpleAvatar from '../assets/Power/PurpleAvatar.svg';
+    import bg from '../assets/Power/BackgroundPower.svg';
     import { isOnPhone as isPhone } from '../components/stores';
 
     export let primaryCards;
@@ -14,7 +15,9 @@
 <div
     class={$isPhone
         ? 'flex flex-col items-center justify-center'
-        : 'w-3/5 p-1 mx-9'}
+        : window.innerWidth < 1500
+          ? 'w-3/5 p-1 ml-20 max-w-screen-sm m-auto'
+          : 'w-3/5 p-1 ml-56 max-w-screen-sm m-auto'}
 >
     <Poster
         blueTitle={'POWER TO THE PEOPLE'}
@@ -56,25 +59,30 @@
             />
         </div>
     {/if}
-    <div class="text-center">
+    {#if window.innerWidth > 1100}
+        <div class="bg-image">
+            <img src={bg} alt="background" />
+        </div>
+    {/if}
+    <div class={'relative text-center max-w-screen-md z-10'}>
         {#each primaryCards as card}
             <div
-                class="shadow-md rounded-lg flex flex-row items-center justify-start flex-wrap bg-white m-7"
+                class={'shadow-md rounded-lg flex flex-row items-center justify-around flex-nowrap bg-white m-7' +
+                    ($isPhone ? ' flex-wrap' : '')}
             >
-                <div
-                    class="shadow-2xl rounded-lg m-7"
-                    style="background-color: #F1F6FF; padding: 10px;"
-                >
-                    <svelte:component this={card.icon} />
-                </div>
-                <div class={!$isPhone ? 'w-3/5 mx-7 content' : 'mx-7 content'}>
+                <img
+                    class="rounded-lg m-5 ml-9 w-16 h-16 m-auto text-center"
+                    src={card.icon}
+                    alt="icon"
+                />
+                <div class={$isPhone ? 'mx-7 content' : 'm-7'}>
                     <h1
-                        class="text-gray-900 dark:text-white text-left font-semibold"
+                        class="text-[#102353] text-gray-900 dark:text-white text-left font-bold leading-7"
                     >
                         {card.title}
                     </h1>
                     <p
-                        class="text-xs text-gray-500 dark:text-gray-400 leading-tight text-left max-w-fit"
+                        class="text-18 font-medium text-gray-500 dark:text-gray-400 leading-7 text-left max-w-fit"
                     >
                         {card.paragraph}
                     </p>
@@ -85,9 +93,12 @@
 </div>
 
 <style>
-    .pow {
-        color: #95b2ff;
-        line-height: 10px;
+    .bg-image img {
+        position: absolute;
+        z-index: 0;
+        left: 55%;
+        top: 75%;
+        transform: scale(1);
     }
     @media screen and (max-width: 750px) {
         .content {

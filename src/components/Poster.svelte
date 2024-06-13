@@ -25,7 +25,7 @@
                 class={'font-semibold mb-2 text-4xl tracking-tight ' +
                     (bg_blue
                         ? 'text-white dark:text-white '
-                        : 'text-gray-900 dark:text-white ')}
+                        : 'text-[#102353] dark:text-white ')}
             >
                 {titles +
                     (spreadTitle[0] === titles && spreadTitle.length - 1
@@ -34,7 +34,7 @@
             </h5>
         {/each}
         <p
-            class={'font-normal leading-tight max-w-fit m-auto mt-5 ' +
+            class={'text-18 font-normal leading-7 max-w-fit m-auto mt-5 z-10 ' +
                 (bg_blue
                     ? 'text-white dark:text-white '
                     : 'text-gray-500 dark:text-gray-400 ') +

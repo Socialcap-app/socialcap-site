@@ -1,13 +1,13 @@
 <script>
-    import { Card, Button } from "flowbite-svelte";
-    import { ArrowRightOutline } from "flowbite-svelte-icons";
+    import { Card, Button } from 'flowbite-svelte';
+    import { ArrowRightOutline } from 'flowbite-svelte-icons';
 
-    import { isOnPhone as isPhone } from "../components/stores";
-    import { onMount } from "svelte";
-    import blue from "../assets/Hero/BlueHero.svg";
-    import pink from "../assets/Hero/PinkHero.svg";
-    import red from "../assets/Hero/RedHero.svg";
-    import green from "../assets/Hero/GreenHero.svg";
+    import { isOnPhone as isPhone } from '../components/stores';
+    import { onMount } from 'svelte';
+    import blue from '../assets/Hero/BlueHero.svg';
+    import pink from '../assets/Hero/PinkHero.svg';
+    import red from '../assets/Hero/RedHero.svg';
+    import green from '../assets/Hero/GreenHero.svg';
 
     let smallWidth = true;
     onMount(() => {
@@ -15,34 +15,34 @@
     });
 </script>
 
-<div class={" all-hero relative" + ($isPhone ? " overflow-hidden" : "")}>
+<div class={' all-hero relative' + ($isPhone ? ' overflow-hidden' : '')}>
     <div
         style="z-index: 1;"
         class={$isPhone
-            ? "text-center mb-40 mt-20"
-            : "text-center mb-40 mt-20 w-3/5"}
+            ? 'text-center mb-40 mt-20'
+            : 'text-center mb-40 mt-20 w-3/5'}
     >
         <Card
             shadow={false}
             class={$isPhone
-                ? "bg-transparent border-0 text-center m-auto"
-                : "bg-transparent border-0 m-auto mb-20 max-w-lg"}
+                ? 'bg-transparent border-0 text-center m-auto'
+                : 'bg-transparent border-0 m-auto mb-20 max-w-lg'}
         >
             <h5
-                class={"z-10 font-semibold mb-2 tracking-tight text-gray-900 " +
-                    ($isPhone ? "text-center text-6xl" : "text-left text-8xl")}
+                class={'text-[#102353] z-10 font-semibold mb-2 tracking-tight text-gray-900 ' +
+                    ($isPhone ? 'text-center text-6xl' : 'text-left text-8xl')}
             >
                 The Social Consensus Layer
             </h5>
             <p
-                class="z-10 mt-5 mb-8 font-normal text-gray-500 dark:text-gray-400 leading-tight text-center max-w-fit"
+                class="z-10 mt-5 mb-8 font-normal text-gray-500 dark:text-gray-400 leading-7 text-left max-w-fit"
             >
                 Empowering communities through trusted credentials and rigorous
                 social consensus
             </p>
             <Button
-                color={"blue"}
-                class={"z-10 w-fit" + ($isPhone ? " m-auto" : "")}
+                color={'blue'}
+                class={'z-10 w-fit' + ($isPhone ? ' m-auto' : '')}
                 >Join communities</Button
             >
         </Card>
@@ -65,7 +65,7 @@
 
 <style>
     .all-hero {
-        background-image: url("../assets/Hero/BackgoundHero.svg");
+        background-image: url('../assets/Hero/BackgoundHero.svg');
         background-size: cover; /* Adjust as needed */
         background-repeat: no-repeat; /* Adjust as needed */
         background-position: center; /* Adjust as needed */

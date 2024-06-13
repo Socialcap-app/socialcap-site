@@ -8,6 +8,10 @@
     import Logo from '../assets/Logo.svg';
     import { FooterCopyright } from 'flowbite-svelte';
     import { isOnPhone as isPhone } from '../components/stores';
+    import TelegramIcon from '../assets/Footer/TelegramIcon.svg';
+    import GithubIcon from '../assets/Footer/GithubIcon.svg';
+    import TwitterIcon from '../assets/Footer/TwitterIcon.svg';
+    import DiscordIcon from '../assets/Footer/DiscordIcon.svg';
 </script>
 
 <div class="w-full flex flex-row justify-between items-center flex-wrap">
@@ -20,10 +24,10 @@
         class={'flex flex-row items-center justify-center gap-10 ' +
             ($isPhone ? 'm-auto w-4/5' : 'mr-10')}
     >
-        <XSolid color="#102353" />
-        <GithubSolid color="#102353" />
-        <PaperPlaneSolid color="#102353" />
-        <DiscordSolid color="#102353" />
+        <img class="scale-125" src={TwitterIcon} alt="telegram icon" />
+        <img class="scale-125" src={GithubIcon} alt="telegram icon" />
+        <img class="scale-125" src={TelegramIcon} alt="telegram icon" />
+        <img class="scale-125" src={DiscordIcon} alt="telegram icon" />
     </div>
 </div>
 <div class="w-full flex flex-row justify-between items-center flex-wrap">

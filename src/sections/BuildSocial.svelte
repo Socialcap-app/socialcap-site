@@ -37,13 +37,13 @@
                 />
                 <div class={!$isPhone ? 'w-3/5 mx-7 flex flex-col ' : 'mx-7'}>
                     <h1
-                        class={'text-gray-900 dark:text-white font-semibold ' +
+                        class={'text-[#102353] dark:text-white font-semibold ' +
                             ($isPhone ? 'text-center' : 'text-left')}
                     >
                         {card.title}
                     </h1>
                     <p
-                        class={'text-xs text-gray-500 dark:text-gray-400 leading-tight max-w-fit font-medium leading-7 ' +
+                        class={'text-18 text-gray-500 max-w-fit font-medium leading-7' +
                             ($isPhone ? ' text-center' : ' text-left')}
                     >
                         {card.description}
