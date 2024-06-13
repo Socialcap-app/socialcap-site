@@ -13,7 +13,7 @@
 </script>
 
 <div
-    class={$isPhone
+    class={window.innerWidth < 1100
         ? 'flex flex-col items-center justify-center'
         : window.innerWidth < 1500
           ? 'w-3/5 p-1 ml-20 max-w-screen-sm m-auto'
@@ -23,7 +23,7 @@
         blueTitle={'POWER TO THE PEOPLE'}
         title={'Power up your Community'}
         description={"Supercharge your community's potential by leveraging the collective wisdom and trust of its members. Enable seamless, efficient interactions that drive innovation and meaningful connections."}
-        centered={$isPhone}
+        centered={window.innerWidth < 1100}
     />
     {#if $isPhone}
         <div class="relative h-96 w-full">
@@ -68,10 +68,10 @@
         {#each primaryCards as card}
             <div
                 class={'shadow-md rounded-lg flex flex-row items-center justify-around flex-nowrap bg-white m-7' +
-                    ($isPhone ? ' flex-wrap' : '')}
+                    ($isPhone ? ' flex-col gap-5' : '')}
             >
                 <img
-                    class="rounded-lg m-5 ml-9 w-16 h-16 m-auto text-center"
+                    class="rounded-lg m-5 mt-7 ml-9 w-16 h-16 m-auto text-center"
                     src={card.icon}
                     alt="icon"
                 />
@@ -97,7 +97,8 @@
         position: absolute;
         z-index: 0;
         left: 55%;
-        top: 75%;
+        /* top: 75%; */
+        top: 180%;
         transform: scale(1);
     }
     @media screen and (max-width: 750px) {

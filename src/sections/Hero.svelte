@@ -15,12 +15,12 @@
     });
 </script>
 
-<div class={' all-hero relative' + ($isPhone ? ' overflow-hidden' : '')}>
+<div class={' all-hero relative' + ($isPhone ? ' ' : '')}>
     <div
         style="z-index: 1;"
         class={$isPhone
-            ? 'text-center mb-40 mt-20'
-            : 'text-center mb-40 mt-20 w-3/5'}
+            ? 'text-center mb-40 pt-40'
+            : 'text-center mb-40 pt-40 pb-60 w-3/5'}
     >
         <Card
             shadow={false}
@@ -73,7 +73,7 @@
     }
     .green {
         position: absolute;
-        top: 0;
+        top: 18%;
         right: 10%;
     }
     .blue {
@@ -88,7 +88,7 @@
     }
     .pink {
         position: absolute;
-        top: 80%;
+        top: 60%;
         right: 15%;
     }
 

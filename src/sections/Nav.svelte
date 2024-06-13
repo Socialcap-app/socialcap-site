@@ -5,7 +5,7 @@
 </script>
 
 <div
-    class={'flex flex-row items-center justify-between bg-transparent p-5' +
+    class={'absolute w-screen flex flex-row items-center justify-between bg-transparent p-5' +
         ($isPhone ? '' : '')}
 >
     <img class="z-10" alt="logo" src={Logo} />
