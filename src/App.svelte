@@ -120,7 +120,7 @@
     });
 </script>
 
-<div class="overflow-visible">
+<div>
     <Nav />
     <Hero />
     <Power {primaryCards} />

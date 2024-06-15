@@ -8,6 +8,7 @@
     import pink from '../assets/Hero/PinkHero.svg';
     import red from '../assets/Hero/RedHero.svg';
     import green from '../assets/Hero/GreenHero.svg';
+    import bg from '../assets/Hero/BackgoundHero.svg';
 
     let smallWidth = true;
     onMount(() => {
@@ -15,7 +16,8 @@
     });
 </script>
 
-<div class={' all-hero' + ($isPhone ? '' : '')}>
+<div class={'all-hero' + ($isPhone ? '' : '')}>
+    <img class="z-0" src={bg} alt="Background Hero" />
     <div
         style="z-index: 1;"
         class={'text-center pt-40 ' +
@@ -63,33 +65,54 @@
 </div>
 
 <style>
-    .all-hero {
+    .all-hero-before {
         background-image: url('../assets/Hero/BackgoundHero.svg');
-        background-size: cover; /* Adjust as needed */
-        background-repeat: no-repeat; /* Adjust as needed */
-        background-position: center; /* Adjust as needed */
-        overflow: visible;
-        position: relative;
+        background-size: contain; /* (cover) Ensures the image covers the entire div */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-position: center; /* Centers the image */
+        position: relative; /* Necessary if you have absolutely positioned children */
+        width: 200vh;
     }
+
+    .all-hero {
+        position: relative;
+        height: 90vh;
+        overflow: visible;
+    }
+    .all-hero img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+    }
+
     .green {
         position: absolute;
-        top: 18%;
-        right: 10%;
+        top: 30%;
+        right: 15%;
+        width: 15%;
     }
     .blue {
         position: absolute;
-        top: 40%;
+        top: 60%;
         right: 30%;
+        width: 15%;
     }
     .red {
         position: absolute;
-        top: 40%;
+        top: 50%;
         right: 5%;
+        width: 15%;
     }
     .pink {
         position: absolute;
-        top: 60%;
+        top: 90%;
         right: 15%;
+        width: 15%;
     }
 
     .square {
@@ -131,8 +154,8 @@
     }
 
     /* <div class="block lg:hidden">
-			<ClaimsTableMobile data={
-        ($claims.data && Array.isArray($claims.data)) ? $claims.data : []
-      } />
-		</div> */
+                                                    <ClaimsTableMobile data={
+                                                        ($claims.data && Array.isArray($claims.data)) ? $claims.data : []
+                                                        } />
+                                                        </div> */
 </style>
