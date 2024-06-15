@@ -120,20 +120,22 @@
     });
 </script>
 
-<Nav />
-<Hero />
-<Power {primaryCards} />
-<BSocial {secondaryCards} />
-<div style="background-color: #1758FE;">
-    <FEngagement />
+<div class="overflow-visible">
+    <Nav />
+    <Hero />
+    <Power {primaryCards} />
+    <BSocial {secondaryCards} />
+    <div style="background-color: #1758FE;">
+        <FEngagement />
+    </div>
+    <div class="max-w-screen-xl m-auto">
+        <AmplifyRep {amplifyCards} />
+        <HowWorks />
+        <CoreFea {coreCards} />
+    </div>
+    <Sponsors />
+    <div style="background-color: #1758FE;">
+        <Newsletter />
+    </div>
+    <Footer />
 </div>
-<div class="max-w-screen-xl m-auto">
-    <AmplifyRep {amplifyCards} />
-    <HowWorks />
-    <CoreFea {coreCards} />
-</div>
-<Sponsors />
-<div style="background-color: #1758FE;">
-    <Newsletter />
-</div>
-<Footer />
