@@ -10,7 +10,7 @@
         centered={true}
     />
     <p
-        class={'text-18 font-normal leading-7 max-w-fit m-auto mt-5 z-10 text-gray-500 dark:text-gray-400 text-center px-9'}
+        class={'text-18 font-normal leading-7 max-w-fit m-auto mt-5 z-10 text-gray-500 dark:text-gray-400 text-center px-9 max-w-screen-lg'}
     >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
         totam laboriosam necessitatibus eaque, in dolorum pariatur voluptatum
@@ -25,7 +25,7 @@
         deserunt? Distinctio, officiis consectetur. Fugiat.
     </p>
     <p
-        class={'text-18 font-normal leading-7 max-w-fit m-auto mt-5 z-10 text-gray-500 dark:text-gray-400 text-center px-9'}
+        class={'text-18 font-normal leading-7 max-w-fit m-auto mt-5 z-10 text-gray-500 dark:text-gray-400 text-center px-9 max-w-screen-lg'}
     >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
         totam laboriosam necessitatibus eaque, in dolorum pariatur voluptatum
@@ -40,7 +40,7 @@
         deserunt? Distinctio, officiis consectetur. Fugiat.
     </p>
     <p
-        class={'text-18 font-normal leading-7 max-w-fit m-auto mt-5 z-10 text-gray-500 dark:text-gray-400 text-center px-9'}
+        class={'text-18 font-normal leading-7 max-w-fit m-auto mt-5 z-10 text-gray-500 dark:text-gray-400 text-center px-9 max-w-screen-lg'}
     >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
         totam laboriosam necessitatibus eaque, in dolorum pariatur voluptatum
