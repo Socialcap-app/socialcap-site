@@ -8,6 +8,7 @@
     import pink from '../assets/Hero/PinkHero.svg';
     import red from '../assets/Hero/RedHero.svg';
     import green from '../assets/Hero/GreenHero.svg';
+    //import green from '../assets/Hero/greenPng.jpg';
     import bg from '../assets/Hero/BackgoundHero.svg';
 
     let smallWidth = true;
@@ -30,13 +31,13 @@
                 : 'bg-transparent border-0 m-auto mb-20 max-w-lg'}
         >
             <h5
-                class={'text-[#102353] z-10 font-semibold mb-2 tracking-tight text-gray-900 ' +
+                class={'col-blue z-10 font-semibold mb-2 tracking-tight text-gray-900 ' +
                     ($isPhone ? 'text-center text-6xl' : 'text-left text-8xl')}
             >
                 The Social Consensus Layer
             </h5>
             <p
-                class="z-10 mt-5 mb-8 font-normal text-gray-500 dark:text-gray-400 leading-7 text-left max-w-fit"
+                class="text-2xl z-10 mt-5 mb-8 font-normal text-gray-500 dark:text-gray-400 leading-38 text-left max-w-fit"
             >
                 Empowering communities through trusted credentials and rigorous
                 social consensus
@@ -73,7 +74,9 @@
         position: relative; /* Necessary if you have absolutely positioned children */
         width: 200vh;
     }
-
+    .col-blue {
+        color: #102353;
+    }
     .all-hero {
         position: relative;
         height: 90vh;
@@ -95,24 +98,28 @@
         top: 30%;
         right: 15%;
         width: 15%;
+        animation: float 4.2s ease-in-out infinite;
     }
     .blue {
         position: absolute;
         top: 60%;
         right: 30%;
         width: 15%;
+        animation: float 4s ease-in-out infinite;
     }
     .red {
         position: absolute;
         top: 50%;
         right: 5%;
         width: 15%;
+        animation: float 3.7s ease-in-out infinite;
     }
     .pink {
         position: absolute;
         top: 90%;
         right: 15%;
         width: 15%;
+        animation: float 4.3s ease-in-out infinite;
     }
 
     .square {
@@ -152,10 +159,15 @@
     h5 {
         max-width: 500px;
     }
-
-    /* <div class="block lg:hidden">
-                                                    <ClaimsTableMobile data={
-                                                        ($claims.data && Array.isArray($claims.data)) ? $claims.data : []
-                                                        } />
-                                                        </div> */
+    @keyframes float {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
 </style>

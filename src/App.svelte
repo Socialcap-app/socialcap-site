@@ -158,14 +158,5 @@
     {#if section === 3}
         <Terms />
     {/if}
-    {#if section !== 0}
-        <div class="w-screen text-center">
-            <Button
-                on:click={() => showingSection.update(() => 0)}
-                color={'blue'}
-                class={'z-10 w-fit m-auto'}>Go Back</Button
-            >
-        </div>
-    {/if}
     <Footer />
 </div>

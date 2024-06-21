@@ -14,7 +14,12 @@
         alt="logo"
         src={Logo}
     />
-    <Button class={'px-5 text-sm font-normal z-10'} color="blue">Sign in</Button
+    <Button
+        on:click={() =>
+            (window.location.href =
+                'https://my-socialcap-dev.vercel.app/home/')}
+        class={'px-5 text-sm font-normal z-10'}
+        color="blue">Sign in</Button
     >
 </div>
 <!-- <Navbar class={'bg-transparent p-0 m-0' + ($isPhone ? ' p-2 mt-0' : ' pt-5')}>

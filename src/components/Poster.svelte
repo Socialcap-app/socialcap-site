@@ -8,7 +8,7 @@
     export let centered = false;
     export let moreClasses = '';
 
-    let spreadTitle = title.split('.');
+    let spreadTitle = title.split('.  ');
 </script>
 
 <div class={moreClasses + (centered ? ' text-center' : ' text-left')}>
@@ -22,10 +22,8 @@
         </p>
         {#each spreadTitle as titles}
             <h5
-                class={'font-semibold mb-2 text-4xl tracking-tight ' +
-                    (bg_blue
-                        ? 'text-white dark:text-white '
-                        : 'text-[#102353] dark:text-white ')}
+                class={'font-semibold mb-2 text-5xl tracking-tight leading-48 ' +
+                    (bg_blue ? 'text-white dark:text-white' : 'col-blue')}
             >
                 {titles +
                     (spreadTitle[0] === titles && spreadTitle.length - 1
@@ -50,9 +48,15 @@
         color: #95b2ff;
         line-height: 10px;
     }
+    .text-18 {
+        font-size: 18px;
+    }
     @media screen and (max-width: 750px) {
         .content {
             margin-bottom: 30px;
         }
+    }
+    .col-blue {
+        color: #102353;
     }
 </style>

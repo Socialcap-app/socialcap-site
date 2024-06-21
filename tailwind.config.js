@@ -34,6 +34,10 @@ export default {
       },
       text: {
         '18': '18px'
+      },
+      leading: {
+        '38': '38px',
+        '48': '48px'
       }
     }
   },

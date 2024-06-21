@@ -28,10 +28,10 @@
         class={'relative flex flex-row align-center justify-around overflow-hidden m-auto max-w-screen-lg' +
             ($isPhone ? ' flex-wrap' : '')}
     >
-        <div class={'' + ($isPhone ? 'w-full' : 'w-2/5')} style="z-index: 1;">
+        <div class={'' + ($isPhone ? 'w-full' : 'w-3/5')} style="z-index: 1;">
             <Poster
                 blueTitle={'validate everything'}
-                title={'Fuel Engagement. Foster Growth'}
+                title={'Fuel Engagement.  Foster Growth'}
                 description={'Significantly enhance your social capital and reputation both within your community and beyond. By showcasing validated achievements and skills, members can extend their influence and network reach.'}
                 bg_blue={true}
                 centered={$isPhone}
