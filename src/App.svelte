@@ -19,7 +19,17 @@
     import firstPower from './assets/Power/firstPower.svg';
     import secondPower from './assets/Power/secondPower.svg';
     import thirdPower from './assets/Power/thirdPower.svg';
-    import { isOnPhone } from './components/stores';
+    import { isOnPhone, showingSection } from './components/stores';
+    import Support from './sections/Support.svelte';
+    import PrivacyPolicies from './sections/PrivacyPolicies.svelte';
+    import Terms from './sections/Terms.svelte';
+    import { Button } from 'flowbite-svelte';
+
+    let section = 0;
+
+    showingSection.subscribe((s) => {
+        section = s;
+    });
 
     const primaryCards = [
         {
@@ -122,20 +132,40 @@
 
 <div>
     <Nav />
-    <Hero />
-    <Power {primaryCards} />
-    <BSocial {secondaryCards} />
-    <div style="background-color: #1758FE;">
-        <FEngagement />
-    </div>
-    <div class="max-w-screen-xl m-auto">
-        <AmplifyRep {amplifyCards} />
-        <HowWorks />
-        <CoreFea {coreCards} />
-    </div>
-    <Sponsors />
-    <div style="background-color: #1758FE;">
-        <Newsletter />
-    </div>
+    {#if section === 0}
+        <Hero />
+        <Power {primaryCards} />
+        <BSocial {secondaryCards} />
+        <div style="background-color: #1758FE;">
+            <FEngagement />
+        </div>
+        <div class="max-w-screen-xl m-auto">
+            <AmplifyRep {amplifyCards} />
+            <HowWorks />
+            <CoreFea {coreCards} />
+        </div>
+        <Sponsors />
+        <div style="background-color: #1758FE;">
+            <Newsletter />
+        </div>
+    {/if}
+    {#if section === 1}
+        <Support />
+    {/if}
+    {#if section === 2}
+        <PrivacyPolicies />
+    {/if}
+    {#if section === 3}
+        <Terms />
+    {/if}
+    {#if section !== 0}
+        <div class="w-screen text-center">
+            <Button
+                on:click={() => showingSection.update(() => 0)}
+                color={'blue'}
+                class={'z-10 w-fit m-auto'}>Go Back</Button
+            >
+        </div>
+    {/if}
     <Footer />
 </div>

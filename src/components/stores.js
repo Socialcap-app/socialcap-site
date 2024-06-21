@@ -11,4 +11,6 @@ function createIsPhone() {
     };
 }
 
+export const showingSection = writable(0);
+
 export const isOnPhone = createIsPhone();
