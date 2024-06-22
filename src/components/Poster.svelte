@@ -48,6 +48,9 @@
         color: #95b2ff;
         line-height: 10px;
     }
+    .leading-48 {
+        line-height: 48px;
+    }
     .text-18 {
         font-size: 18px;
     }

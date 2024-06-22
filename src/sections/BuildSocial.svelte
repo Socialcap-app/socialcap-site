@@ -37,7 +37,7 @@
                 />
                 <div class={!$isPhone ? 'w-3/5 mx-7 flex flex-col ' : 'mx-7'}>
                     <h1
-                        class={'text-[#102353] dark:text-white font-semibold ' +
+                        class={'text-blue dark:text-white font-semibold ' +
                             ($isPhone ? 'text-center' : 'text-left')}
                     >
                         {card.title}
@@ -53,3 +53,12 @@
         {/each}
     </div>
 </div>
+
+<style>
+    .text-18 {
+        font-size: 18px;
+    }
+    .text-blue {
+        color: #102353;
+    }
+</style>

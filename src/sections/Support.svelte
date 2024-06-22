@@ -25,3 +25,9 @@
         deserunt? Distinctio, officiis consectetur. Fugiat.
     </p>
 </div>
+
+<style>
+    .text-18 {
+        font-size: 18px;
+    }
+</style>

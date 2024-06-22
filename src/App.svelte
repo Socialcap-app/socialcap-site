@@ -1,29 +1,26 @@
 <script>
     import { onMount } from 'svelte';
+
     import Nav from './sections/Nav.svelte';
     import Hero from './sections/Hero.svelte';
-    import Power from './sections/Power.svelte';
+    import Power from './sections/PowerUp.svelte';
     import BSocial from './sections/BuildSocial.svelte';
     import FEngagement from './sections/FuelEng.svelte';
-    import {
-        BadgeCheckOutline,
-        FileShieldOutline,
-        ObjectsColumnOutline,
-    } from 'flowbite-svelte-icons';
     import AmplifyRep from './sections/AmplifyRep.svelte';
     import HowWorks from './sections/HowWorks.svelte';
     import CoreFea from './sections/CoreFea.svelte';
     import Sponsors from './sections/Sponsors.svelte';
     import Newsletter from './sections/Newsletter.svelte';
-    import Footer from './sections/Footer.svelte';
     import firstPower from './assets/Power/firstPower.svg';
     import secondPower from './assets/Power/secondPower.svg';
     import thirdPower from './assets/Power/thirdPower.svg';
-    import { isOnPhone, showingSection } from './components/stores';
+    import Footer from './sections/Footer.svelte';
+
     import Support from './sections/Support.svelte';
     import PrivacyPolicies from './sections/PrivacyPolicies.svelte';
     import Terms from './sections/Terms.svelte';
-    import { Button } from 'flowbite-svelte';
+
+    import { isOnPhone, showingSection } from './components/stores';
 
     let section = 0;
 

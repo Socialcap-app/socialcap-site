@@ -15,3 +15,9 @@
         {description}
     </p>
 </Card>
+
+<style>
+    .text-18 {
+        font-size: 18px;
+    }
+</style>

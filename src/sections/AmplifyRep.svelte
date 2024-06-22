@@ -38,7 +38,7 @@
                     class={!$isPhone ? 'max-w-screen-sm mx-7 content' : 'mx-7'}
                 >
                     <h1
-                        class={'text-[#102353] text-gray-900 text-18 leading-7 font-bold text-center mb-2'}
+                        class={'text-blue text-gray-900 text-18 leading-7 font-bold text-center mb-2'}
                     >
                         {card.title}
                     </h1>
@@ -59,5 +59,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .text-18 {
+        font-size: 18px;
+    }
+    .text-blue {
+        color: #102353;
     }
 </style>

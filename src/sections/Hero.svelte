@@ -44,7 +44,7 @@
             </p>
             <Button
                 color={'blue'}
-                class={'z-10 w-fit' + ($isPhone ? ' m-auto' : '')}
+                class={'z-10  w-fit text-lg' + ($isPhone ? ' m-auto' : '')}
                 >Join communities</Button
             >
         </Card>
@@ -76,6 +76,9 @@
     }
     .col-blue {
         color: #102353;
+    }
+    .leading-38 {
+        line-height: 38px;
     }
     .all-hero {
         position: relative;

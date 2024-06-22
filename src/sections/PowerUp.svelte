@@ -78,7 +78,7 @@
                     />
                     <div class={$isPhone ? 'mx-7 content' : 'm-7'}>
                         <h1
-                            class="text-[#102353] text-gray-900 dark:text-white text-left font-bold leading-7"
+                            class="text-blue text-18 text-gray-900 dark:text-white text-left font-bold leading-7"
                         >
                             {card.title}
                         </h1>
@@ -118,6 +118,12 @@
 
     .bg-image img {
         width: 100%;
+    }
+    .text-18 {
+        font-size: 18px;
+    }
+    .text-blue {
+        color: #102353;
     }
     @media screen and (max-width: 750px) {
         .content {
