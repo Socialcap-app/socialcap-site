@@ -1,13 +1,15 @@
 <script>
     import Poster from '../components/Poster.svelte';
+    import { isOnPhone as isPhone } from '../components/stores';
+
     import Elipses from '../assets/Power/Elipses.svg';
     import Rayo from '../assets/Power/Rayo.svg';
     import BlueAvatar from '../assets/Power/BlueAvatar.svg';
     import PinkAvatar from '../assets/Power/PinkAvatar.svg';
     import YellowAvatar from '../assets/Power/YellowAvatar.svg';
     import PurpleAvatar from '../assets/Power/PurpleAvatar.svg';
-    import bg from '../assets/Power/BackgroundPower.svg';
-    import { isOnPhone as isPhone } from '../components/stores';
+    import bg from '../assets/Power/powerup_dektop.png';
+    import bg_mobile from '../assets/Power/powerup_mobile.png';
 
     export let primaryCards;
 </script>
@@ -32,7 +34,7 @@
             centered={window.innerWidth < 1100}
         />
         {#if $isPhone}
-            <div class="relative h-96 w-full">
+            <!-- <div class="relative h-96 w-full">
                 <img
                     class="absolute left-0 right-0 ml-auto mr-auto"
                     alt="icon"
@@ -62,6 +64,13 @@
                     class="absolute top-40 left-40 right-0 ml-auto mr-auto text-center m-auto mt-20 pt-10"
                     alt="icon"
                     src={PurpleAvatar}
+                />
+            </div> -->
+            <div class="relative h-96 w-full">
+                <img
+                    class="absolute left-0 right-0 ml-auto mr-auto text-center m-auto mt-0 pt-10"
+                    alt="icon"
+                    src={bg_mobile}
                 />
             </div>
         {/if}

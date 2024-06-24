@@ -4,10 +4,10 @@
 
     import { isOnPhone as isPhone } from '../components/stores';
     import { onMount } from 'svelte';
-    import blue from '../assets/Hero/BlueHero.svg';
-    import pink from '../assets/Hero/PinkHero.svg';
-    import red from '../assets/Hero/RedHero.svg';
-    import green from '../assets/Hero/GreenHero.svg';
+    import blue from '../assets/Hero/BlueHero.png';
+    import pink from '../assets/Hero/PinkHero.png';
+    import red from '../assets/Hero/RedHero.png';
+    import green from '../assets/Hero/GreenHero.png';
     //import green from '../assets/Hero/greenPng.jpg';
     import bg from '../assets/Hero/BackgoundHero.svg';
 
@@ -99,7 +99,7 @@
     .green {
         position: absolute;
         top: 30%;
-        right: 15%;
+        right: 18%;
         width: 15%;
         animation: float 4.2s ease-in-out infinite;
     }

@@ -1,8 +1,8 @@
 <script>
     import Poster from '../components/Poster.svelte';
-    import Green from '../assets/Build/Green.svg';
-    import Pink from '../assets/Build/Pink.svg';
-    import Yellow from '../assets/Build/Yellow.svg';
+    import Green from '../assets/Build/transparency_logo1.png';
+    import Pink from '../assets/Build/transparency_logo2.png';
+    import Yellow from '../assets/Build/transparency_logo3.png';
     import { isOnPhone as isPhone } from '../components/stores';
     export let secondaryCards;
 </script>
