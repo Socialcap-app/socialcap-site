@@ -21,6 +21,8 @@
     import Terms from './sections/Terms.svelte';
 
     import { isOnPhone, showingSection } from './components/stores';
+    import { Button } from 'flowbite-svelte';
+    import { AngleUpOutline } from 'flowbite-svelte-icons';
 
     let section = 0;
 
@@ -121,8 +123,32 @@
         },
     ];
 
+    const topFunction = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
+    let goToTopShown = false;
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (
+            document.body.scrollTop > 800 ||
+            document.documentElement.scrollTop > 800
+        ) {
+            goToTopShown = true;
+        } else {
+            goToTopShown = false;
+        }
+    }
+
     onMount(() => {
-        console.log('mount');
         isOnPhone.checkDimenssions();
     });
 </script>
@@ -155,5 +181,18 @@
     {#if section === 3}
         <Terms />
     {/if}
+    <div
+        class={'fixed z-10 duration-500 ' +
+            (goToTopShown ? 'opacity-100 ' : 'opacity-0 ') +
+            (isOnPhone ? 'bottom-10 right-10' : 'bottom-16 right-16')}
+    >
+        <Button
+            on:click={() => topFunction()}
+            color={'blue'}
+            id="goToTop"
+            class={'w-16 h-16 rounded-full text-center' +
+                (goToTopShown ? '' : ' cursor-auto')}><AngleUpOutline /></Button
+        >
+    </div>
     <Footer />
 </div>
