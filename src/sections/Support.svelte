@@ -1,16 +1,19 @@
 <script>
-    import Poster from '../components/Poster.svelte';
+    import Poster from "../components/Poster.svelte";
+    import { isOnPhone } from "../components/stores";
 </script>
 
-<div class="p-20">
+<div class={isOnPhone ? "py-20 px-7" : " p-20"}>
     <Poster
-        blueTitle={'the socialcap support'}
-        title={'Support'}
-        description={'Short description of socialcap support'}
+        blueTitle={"the socialcap support"}
+        title={"Support"}
+        description={"Short description of socialcap support"}
         centered={true}
+        moreClasses={"m-0 p-0"}
     />
     <p
-        class={'text-18 font-normal leading-7 max-w-fit m-auto mt-5 z-10 text-gray-500 text-center px-9 max-w-screen-lg'}
+        class={"text-18 font-normal leading-7 m-auto mt-5 z-10 text-gray-500 text-center" +
+            (isOnPhone ? "" : " max-w-screen-lg px-9 max-w-screen-lg")}
     >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
         totam laboriosam necessitatibus eaque, in dolorum pariatur voluptatum

@@ -33,7 +33,7 @@
         <a href="https://t.me/socialcap_ann">
             <img class="scale-125" src={TelegramIcon} alt="telegram icon" />
         </a>
-        <a href="https://discord.gg/64y3npDD">
+        <a href="https://discord.gg/f2ywH6Bsu2">
             <img class="scale-125" src={DiscordIcon} alt="discord icon" />
         </a>
     </div>

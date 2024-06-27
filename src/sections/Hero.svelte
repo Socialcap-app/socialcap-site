@@ -1,15 +1,15 @@
 <script>
-    import { Card, Button } from 'flowbite-svelte';
-    import { ArrowRightOutline } from 'flowbite-svelte-icons';
+    import { Card, Button } from "flowbite-svelte";
+    import { ArrowRightOutline } from "flowbite-svelte-icons";
 
-    import { isOnPhone as isPhone } from '../components/stores';
-    import { onMount } from 'svelte';
-    import blue from '../assets/Hero/BlueHero.png';
-    import pink from '../assets/Hero/PinkHero.png';
-    import red from '../assets/Hero/RedHero.png';
-    import green from '../assets/Hero/GreenHero.png';
+    import { isOnPhone as isPhone } from "../components/stores";
+    import { onMount } from "svelte";
+    import blue from "../assets/Hero/BlueHero.png";
+    import pink from "../assets/Hero/PinkHero.png";
+    import red from "../assets/Hero/RedHero.png";
+    import green from "../assets/Hero/GreenHero.png";
     //import green from '../assets/Hero/greenPng.jpg';
-    import bg from '../assets/Hero/BackgoundHero.svg';
+    import bg from "../assets/Hero/BackgoundHero.svg";
 
     let smallWidth = true;
     onMount(() => {
@@ -17,34 +17,36 @@
     });
 </script>
 
-<div class={'all-hero' + ($isPhone ? '' : '')}>
+<div class={"all-hero" + ($isPhone ? "" : "")}>
     <img class="z-0" src={bg} alt="Background Hero" />
     <div
         style="z-index: 1;"
-        class={'text-center pt-40 ' +
-            ($isPhone ? 'mb-40' : 'text-center mb-20 pb-80 w-3/5')}
+        class={"text-center pt-40 " +
+            ($isPhone ? "mb-40" : "text-center mb-20 pb-80 w-3/5")}
     >
         <Card
             shadow={false}
             class={$isPhone
-                ? 'bg-transparent border-0 text-center m-auto'
-                : 'bg-transparent border-0 m-auto mb-20 max-w-lg'}
+                ? "bg-transparent border-0 text-center m-auto"
+                : "bg-transparent border-0 m-auto mb-20 max-w-lg"}
         >
             <h5
-                class={'col-blue z-10 font-semibold mb-2 tracking-tight text-gray-900 ' +
-                    ($isPhone ? 'text-center text-6xl' : 'text-left text-8xl')}
+                class={"col-blue z-10 font-semibold mb-2 tracking-tight text-gray-900 " +
+                    ($isPhone ? "text-center text-6xl" : "text-left text-8xl")}
             >
                 The Social Consensus Layer
             </h5>
             <p
-                class="text-2xl z-10 mt-5 mb-8 font-normal text-gray-500 dark:text-gray-400 leading-38 text-left max-w-fit"
+                class={"text-2xl z-10 mt-5 mb-8 font-normal text-gray-500 dark:text-gray-400 leading-38 text-left max-w-fit " + ($isPhone ? 'text-center' : '')}
             >
                 Empowering communities through trusted credentials and rigorous
                 social consensus
             </p>
             <Button
-                color={'blue'}
-                class={'z-10  w-fit text-lg' + ($isPhone ? ' m-auto' : '')}
+                on:click={() =>
+                    (window.location.href = "https://my.socialcap.dev/signup/")}
+                color={"blue"}
+                class={"z-10  w-fit text-lg" + ($isPhone ? " m-auto" : "")}
                 >Join communities</Button
             >
         </Card>
@@ -67,7 +69,7 @@
 
 <style>
     .all-hero-before {
-        background-image: url('../assets/Hero/BackgoundHero.svg');
+        background-image: url("../assets/Hero/BackgoundHero.svg");
         background-size: contain; /* (cover) Ensures the image covers the entire div */
         background-repeat: no-repeat; /* Prevents the image from repeating */
         background-position: center; /* Centers the image */
