@@ -25,7 +25,7 @@
 
 <div class="relative flex overflow-hidden m-auto w-full">
     <div
-        class={'relative flex flex-row align-center justify-around overflow-hidden m-auto max-w-screen-lg' +
+        class={'relative flex flex-row align-center justify-around overflow-visible m-auto max-w-screen-lg' +
             ($isPhone ? ' flex-wrap' : '')}
     >
         <div class={'' + ($isPhone ? 'w-full' : 'w-3/5')} style="z-index: 1;">
@@ -39,10 +39,12 @@
         </div>
         <div
             class={'' + ($isPhone ? 'w-full m-5 mt-20' : 'w-1/2')}
-            style="z-index: 1;"
+            style="z-index: 10;"
         >
             {#each cards as { title, description }}
-                <Cards {title} {description} />
+                <div data-aos="fade-left">
+                    <Cards {title} {description} />
+                </div>
             {/each}
         </div>
     </div>

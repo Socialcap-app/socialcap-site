@@ -1,8 +1,27 @@
 <script>
     import Poster from '../components/Poster.svelte';
-    import FormPc from '../assets/FormPc.svg';
+    import form0 from '../assets/Works/Form0.svg';
+    import form1 from '../assets/Works/Form1.svg';
+    import form2 from '../assets/Works/Form2.svg';
+    import form3 from '../assets/Works/Form3.svg';
+    import form4 from '../assets/Works/Form4.svg';
 
     import { isOnPhone as isPhone } from '../components/stores';
+    import { onMount } from 'svelte';
+
+    const forms = [form0, form1, form2, form3, form4];
+
+    let currentSlide = 0;
+    const slideInterval = 2000; // 2 seconds
+
+    const nextSlide = () => {
+        currentSlide = (currentSlide + 1) % forms.length;
+    };
+
+    onMount(() => {
+        const interval = setInterval(nextSlide, slideInterval);
+        return () => clearInterval(interval); // Clean up interval on component destroy
+    });
 </script>
 
 <div class="mb-20">
@@ -12,9 +31,35 @@
         description={'Check out this video to experience the full process'}
         centered={true}
     />
-    <img
-        class={'m-auto mt-20 ' + ($isPhone ? 'w-11/12' : 'w-4/5')}
-        alt="Form demostrativo"
-        src={FormPc}
-    />
+    <div class="slideshow" style={$isPhone ? 'height: 300px' : 'height: 600px'}>
+        {#each forms as form, index}
+            <img
+                class={'slide m-auto mt-20 ' +
+                    ($isPhone ? 'w-11/12' : 'w-4/5') +
+                    (index === currentSlide ? ' active' : '')}
+                alt="Form demostrativo"
+                src={form}
+            />
+        {/each}
+    </div>
 </div>
+
+<style>
+    .slideshow {
+        position: relative;
+        width: 80%; /* Adjust as needed */
+        margin: 0 auto;
+        height: 600px;
+    }
+
+    .slide {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+        opacity: 1;
+    }
+</style>

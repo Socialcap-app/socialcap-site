@@ -77,6 +77,7 @@
         <div class={'relative text-center max-w-screen-md z-10'}>
             {#each primaryCards as card}
                 <div
+                    data-aos="fade-up"
                     class={'shadow-md rounded-lg flex flex-row items-center justify-around flex-nowrap bg-white m-7' +
                         ($isPhone ? ' flex-col gap-5' : '')}
                 >
