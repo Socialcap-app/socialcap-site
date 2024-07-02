@@ -49,10 +49,10 @@
         <p
             class="cursor-pointer"
             on:click={() => {
-                showingSection.update(() => 1);
+                window.open('https://docs.socialcap.dev/', "_blank"); 
             }}
         >
-            Support
+            Documentation
         </p>
         <p
             class="cursor-pointer"
