@@ -12,7 +12,7 @@
     const forms = [form0, form1, form2, form3, form4];
 
     let currentSlide = 0;
-    const slideInterval = 2000; // 2 seconds
+    const slideInterval = 2500; // 2 seconds
 
     const nextSlide = () => {
         currentSlide = (currentSlide + 1) % forms.length;
