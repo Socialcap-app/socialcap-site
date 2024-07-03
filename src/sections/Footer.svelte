@@ -49,7 +49,7 @@
         <p
             class="cursor-pointer"
             on:click={() => {
-                showingSection.update(() => 1);
+              (window.location.href = "https://docs.socialcap.dev/")
             }}
         >
             Support
