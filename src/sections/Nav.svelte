@@ -17,7 +17,7 @@
     <Button
         on:click={() =>
             (window.location.href =
-                'https://my-socialcap-dev.vercel.app/login/')}
+                'https://my.socialcap.dev/login/')}
         class={'px-5 text-lg font-normal z-10'}
         color="blue">Sign in</Button
     >
