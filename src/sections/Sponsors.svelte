@@ -2,7 +2,6 @@
     import Poster from '../components/Poster.svelte';
     import sponsor1 from '../assets/Sponsors/TriangleSponsor.svg';
     import sponsor2 from '../assets/Sponsors/LabsSponsor.svg';
-    import sponsor3 from '../assets/Sponsors/AeriusLabsSponsor.svg';
     import sponsor4 from '../assets/Sponsors/MinaSponsor.svg';
     import sponsor5 from '../assets/Sponsors/IgniteSponsor.svg';
     import sponsor6 from '../assets/Sponsors/ZkOkSponsor.svg';
@@ -13,7 +12,6 @@
     const sponsors = [
         sponsor1,
         sponsor2,
-        sponsor3,
         sponsor4,
         sponsor5,
         sponsor6,
