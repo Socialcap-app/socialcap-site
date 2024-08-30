@@ -168,9 +168,9 @@
             <CoreFea {coreCards} />
         </div>
         <Sponsors />
-        <div style="background-color: #1758FE;">
+        <!-- <div style="background-color: #1758FE;">
             <Newsletter />
-        </div>
+        </div> -->
     {/if}
     {#if section === 1}
         <Support />
