@@ -8,6 +8,7 @@
 
     import { isOnPhone as isPhone } from '../components/stores';
     import { onMount } from 'svelte';
+  import { Video } from 'flowbite-svelte';
 
     const forms = [form0, form1, form2, form3, form4];
 
@@ -31,18 +32,11 @@
         description={'Check out this video to experience the full process'}
         centered={true}
     />
-    <div class="slideshow" style={$isPhone ? 'height: 300px' : 'height: 600px'}>
-        {#each forms as form, index}
-            <img
-                class={'slide m-auto mt-20 ' +
-                    ($isPhone ? 'w-11/12' : 'w-4/5') +
-                    (index === currentSlide ? ' active' : '')}
-                alt="Form demostrativo"
-                src={form}
-            />
-        {/each}
-    </div>
+
+    <Video src="/videos/HIW.mp4" controls trackSrc="HIW.mp4" />
+
 </div>
+
 
 <style>
     .slideshow {
