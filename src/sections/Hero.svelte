@@ -44,10 +44,10 @@
             </p>
             <Button
                 on:click={() =>
-                    (window.location.href = "https://my.socialcap.dev/signup/")}
+                    (window.location.href = "https://my.socialcap.dev")}
                 color={"blue"}
                 class={"z-10  w-fit text-lg" + ($isPhone ? " m-auto" : "")}
-                >Join communities</Button
+                >Discover communities</Button
             >
         </Card>
         {#if window.innerWidth > 1050}
